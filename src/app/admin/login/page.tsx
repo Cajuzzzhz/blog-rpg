@@ -7,7 +7,7 @@ import BackButton from "@/components/BackButton";
 
 export default function LoginAdmin() {
   const USUARIO_CORRETO = "Não se esqueçam de mim"; // Pode mudar para o que quiser
-  const SENHA_CORRETA = "SENHATESTE"; // Pode mudar para o que quiser
+  const SENHA_CORRETA = "amelia"; // Pode mudar para o que quiser
   // =================================
 
   const [usuario, setUsuario] = useState("");
