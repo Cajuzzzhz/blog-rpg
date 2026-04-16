@@ -40,47 +40,47 @@ export default function LoginAdmin() {
         </div>
         
         {/* Caixa de Login (Estilo Flat 2016) */}
-        <div className="bg-white border border-gray-200 p-8 shadow-sm rounded-sm">
-          <h2 className="font-playfair text-2xl text-gray-800 mb-6 text-center font-bold">
+        <div className="bg-[#2d2d2d] border border-gray-700 p-8 shadow-sm rounded-sm">
+          <h2 className="font-playfair text-2xl text-gray-100 mb-6 text-center font-bold">
             Login
           </h2>
           
           {error && (
-            <div className="mb-4 p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-sm text-center">
+            <div className="mb-4 p-3 bg-red-900 border border-red-700 text-red-300 text-sm rounded-sm text-center">
               {error}
             </div>
           )}
 
           <form onSubmit={handleLogin} className="space-y-5">
             <div>
-              <label className="block text-gray-600 text-xs mb-1 font-bold uppercase tracking-wide">
+              <label className="block text-gray-400 text-xs mb-1 font-bold uppercase tracking-wide">
                 Usuário
               </label>
               <input
                 type="text"
                 value={usuario}
                 onChange={(e) => setUsuario(e.target.value)}
-                className="w-full bg-white border border-gray-300 text-gray-800 px-3 py-2 rounded-sm focus:outline-none focus:border-[#c9302c]"
+                className="w-full bg-[#1a1a1a] border border-gray-700 text-gray-100 px-3 py-2 rounded-sm focus:outline-none focus:border-[#ff5252]"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-gray-600 text-xs mb-1 font-bold uppercase tracking-wide">
+              <label className="block text-gray-400 text-xs mb-1 font-bold uppercase tracking-wide">
                 Senha
               </label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-white border border-gray-300 text-gray-800 px-3 py-2 rounded-sm focus:outline-none focus:border-[#c9302c]"
+                className="w-full bg-[#1a1a1a] border border-gray-700 text-gray-100 px-3 py-2 rounded-sm focus:outline-none focus:border-[#ff5252]"
                 required
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#c9302c] hover:bg-[#a02622] text-white font-bold py-3 rounded-sm tracking-wider uppercase text-sm mt-2 transition-colors"
+              className="w-full bg-[#ff5252] hover:bg-[#ff6b6b] text-white font-bold py-3 rounded-sm tracking-wider uppercase text-sm mt-2 transition-colors"
             >
               Entrar
             </button>

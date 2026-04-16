@@ -1,13 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  /* Cinza clássico "Twitter 2016" para preencher bem as laterais */
-  --bg-color: #e6ecf0; 
-  --text-main: #333333;
-  --text-muted: #777777;
-  --red-accent: #c9302c;
-  --card-bg: #ffffff;
-  --border-color: #ccd6dd;
+  --bg-color: #1a1a1a; 
+  --text-main: #e8e8e8;
+  --text-muted: #a8a8a8;
+  --red-accent: #ff5252;
+  --card-bg: #2d2d2d;
+  --border-color: #404040;
 }
 
 body {

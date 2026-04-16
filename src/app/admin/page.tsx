@@ -60,16 +60,16 @@ export default function AdminDashboard() {
 
   return (
     <div className="py-6">
-      <div className="bg-white border border-gray-200 p-8 shadow-sm rounded-sm">
-        <div className="flex justify-between items-center mb-8 border-b border-gray-200 pb-4">
-          <h2 className="font-playfair text-3xl text-gray-800 font-bold tracking-tight">
+      <div className="bg-[#2d2d2d] border border-gray-700 p-8 shadow-sm rounded-sm">
+        <div className="flex justify-between items-center mb-8 border-b border-gray-700 pb-4">
+          <h2 className="font-playfair text-3xl text-gray-100 font-bold tracking-tight">
             Painel de Publicação
           </h2>
           
           {/* Novo Botão de Voltar */}
           <Link 
             href="/"
-            className="text-xs text-gray-500 hover:text-[#c9302c] uppercase font-bold tracking-wider transition-colors"
+            className="text-xs text-gray-400 hover:text-[#ff5252] uppercase font-bold tracking-wider transition-colors"
           >
             « Voltar ao Início
           </Link>
@@ -78,8 +78,8 @@ export default function AdminDashboard() {
         {mensagem && (
           <div className={`mb-6 p-4 rounded-sm text-sm border ${
             mensagem.tipo === "sucesso" 
-              ? "bg-green-50 border-green-200 text-green-700" 
-              : "bg-red-50 border-red-200 text-red-700"
+              ? "bg-green-900 border-green-700 text-green-300" 
+              : "bg-red-900 border-red-700 text-red-300"
           }`}>
             {mensagem.texto}
           </div>
@@ -88,43 +88,43 @@ export default function AdminDashboard() {
         <form onSubmit={handlePublicar} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <label className="block text-gray-600 text-xs mb-2 font-bold uppercase tracking-wide">Título</label>
+              <label className="block text-gray-400 text-xs mb-2 font-bold uppercase tracking-wide">Título</label>
               <input
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full bg-white border border-gray-300 text-gray-800 px-3 py-2 rounded-sm focus:outline-none focus:border-[#c9302c]"
+                className="w-full bg-[#1a1a1a] border border-gray-700 text-gray-100 px-3 py-2 rounded-sm focus:outline-none focus:border-[#ff5252]"
               />
             </div>
             <div>
-              <label className="block text-gray-600 text-xs mb-2 font-bold uppercase tracking-wide">Data da Postagem</label>
+              <label className="block text-gray-400 text-xs mb-2 font-bold uppercase tracking-wide">Data da Postagem</label>
               <input
                 type="text"
                 value={postDate}
                 onChange={(e) => setPostDate(e.target.value)}
-                className="w-full bg-white border border-gray-300 text-gray-800 px-3 py-2 rounded-sm focus:outline-none focus:border-[#c9302c]"
+                className="w-full bg-[#1a1a1a] border border-gray-700 text-gray-100 px-3 py-2 rounded-sm focus:outline-none focus:border-[#ff5252]"
                 required
                 placeholder="Ex: 14 de Outubro de 2016, 15:30"
               />
             </div>
             <div>
-              <label className="block text-gray-600 text-xs mb-2 font-bold uppercase tracking-wide">Tag</label>
+              <label className="block text-gray-400 text-xs mb-2 font-bold uppercase tracking-wide">Tag</label>
               <input
                 type="text"
                 value={tag}
                 onChange={(e) => setTag(e.target.value)}
-                className="w-full bg-white border border-gray-300 text-gray-800 px-3 py-2 rounded-sm focus:outline-none focus:border-[#c9302c]"
+                className="w-full bg-[#1a1a1a] border border-gray-700 text-gray-100 px-3 py-2 rounded-sm focus:outline-none focus:border-[#ff5252]"
                 required
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-gray-600 text-xs mb-2 font-bold uppercase tracking-wide">Conteúdo</label>
+            <label className="block text-gray-400 text-xs mb-2 font-bold uppercase tracking-wide">Conteúdo</label>
             <textarea
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className="w-full bg-white border border-gray-300 text-gray-800 px-3 py-2 rounded-sm focus:outline-none focus:border-[#c9302c] h-64 resize-y"
+              className="w-full bg-[#1a1a1a] border border-gray-700 text-gray-100 px-3 py-2 rounded-sm focus:outline-none focus:border-[#ff5252] h-64 resize-y"
               required
             />
           </div>
@@ -133,7 +133,7 @@ export default function AdminDashboard() {
             <button
               type="submit"
               disabled={loading}
-              className="bg-[#c9302c] hover:bg-[#a02622] text-white font-bold py-3 px-6 rounded-sm uppercase tracking-wider text-sm transition-colors"
+              className="bg-[#ff5252] hover:bg-[#ff6b6b] text-white font-bold py-3 px-6 rounded-sm uppercase tracking-wider text-sm transition-colors"
             >
               {loading ? "Publicando..." : "Publicar agora"}
             </button>

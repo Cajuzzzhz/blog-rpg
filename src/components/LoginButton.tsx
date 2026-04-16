@@ -78,7 +78,7 @@ export default function LoginButton() {
       {/* Botão do Ícone */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-sm border border-gray-300 bg-white hover:bg-gray-50 transition-all flex items-center justify-center cursor-pointer shadow-sm text-gray-600"
+        className="p-2 rounded-sm border border-gray-700 bg-[#2d2d2d] hover:bg-gray-700 transition-all flex items-center justify-center cursor-pointer shadow-sm text-gray-400"
       >
         {isLoggedIn ? (
           <img
@@ -109,7 +109,7 @@ export default function LoginButton() {
 
       {/* Modal Flutuante */}
       {isOpen && (
-        <div className="absolute right-0 mt-3 w-72 p-6 z-50 bg-white border border-gray-200 shadow-lg rounded-sm animate-in fade-in slide-in-from-top-2 duration-200">
+        <div className="absolute right-0 mt-3 w-72 p-6 z-50 bg-[#2d2d2d] border border-gray-700 shadow-lg rounded-sm animate-in fade-in slide-in-from-top-2 duration-200">
           {isLoggedIn ? (
             // CONTEÚDO QUANDO LOGADO
             <div className="text-center">
@@ -117,14 +117,14 @@ export default function LoginButton() {
                 <img
                   src="/avatar.png"
                   alt="Avatar"
-                  className="w-16 h-16 rounded-sm border border-gray-300 object-cover bg-gray-100"
+                  className="w-16 h-16 rounded-sm border border-gray-700 object-cover bg-gray-700"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = "/placeholder-avatar.png";
                   }}
                 />
               </div>
 
-              <h3 className="text-lg font-bold text-gray-800 mb-4 uppercase tracking-wide">
+              <h3 className="text-lg font-bold text-gray-100 mb-4 uppercase tracking-wide">
                 {userName}
               </h3>
 
@@ -133,14 +133,14 @@ export default function LoginButton() {
                   setIsOpen(false);
                   router.push("/admin");
                 }}
-                className="w-full py-2.5 mb-2 bg-[#c9302c] hover:bg-[#a02622] text-white font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border-none cursor-pointer"
+                className="w-full py-2.5 mb-2 bg-[#ff5252] hover:bg-[#ff6b6b] text-white font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border-none cursor-pointer"
               >
                 Painel de Publicação
               </button>
 
               <button
                 onClick={handleLogout}
-                className="w-full py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-600 font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border border-gray-200 cursor-pointer"
+                className="w-full py-2.5 bg-gray-700 hover:bg-gray-600 text-gray-300 font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border border-gray-600 cursor-pointer"
               >
                 Desconectar
               </button>
@@ -148,10 +148,10 @@ export default function LoginButton() {
           ) : (
             // CONTEÚDO QUANDO NÃO LOGADO
             <div className="text-left">
-              <h3 className="text-sm font-bold text-gray-800 mb-1">
+              <h3 className="text-sm font-bold text-gray-100 mb-1">
                 Você não está logado.
               </h3>
-              <p className="text-gray-500 text-xs mb-5">
+              <p className="text-gray-400 text-xs mb-5">
                 Deseja realizar o login para acessar o painel?
               </p>
 
@@ -161,14 +161,14 @@ export default function LoginButton() {
                     setIsOpen(false);
                     router.push("/admin/login");
                   }}
-                  className="w-full py-2.5 bg-[#c9302c] hover:bg-[#a02622] text-white font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border-none cursor-pointer"
+                  className="w-full py-2.5 bg-[#ff5252] hover:bg-[#ff6b6b] text-white font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border-none cursor-pointer"
                 >
                   Fazer Login
                 </button>
                 
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="w-full py-2.5 bg-transparent hover:bg-gray-50 text-gray-500 hover:text-gray-700 font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border border-gray-300 cursor-pointer"
+                  className="w-full py-2.5 bg-transparent hover:bg-gray-700 text-gray-400 hover:text-gray-300 font-bold rounded-sm uppercase tracking-widest text-xs transition-colors border border-gray-700 cursor-pointer"
                 >
                   Cancelar
                 </button>
@@ -176,8 +176,8 @@ export default function LoginButton() {
             </div>
           )}
 
-          {/* Triângulo Branco */}
-          <div className="absolute -top-1.5 right-3 w-3 h-3 bg-white border-l border-t border-gray-200 rotate-45"></div>
+          {/* Triângulo Escuro */}
+          <div className="absolute -top-1.5 right-3 w-3 h-3 bg-[#2d2d2d] border-l border-t border-gray-700 rotate-45"></div>
         </div>
       )}
     </div>

@@ -9,7 +9,7 @@ export default function BackButton() {
   return (
     <button
       onClick={() => router.push("/")}
-      className="flex items-center gap-2 text-gray-500 hover:text-[#c9302c] transition-colors text-xs uppercase tracking-widest font-bold"
+      className="flex items-center gap-2 text-gray-400 hover:text-[#ff5252] transition-colors text-xs uppercase tracking-widest font-bold"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
